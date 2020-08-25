@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Error from './Error';
 import PropTypes from 'prop-types';
 
-const Formulario = (props) => {
+const Formulario = ({ setBusquedaLetra }) => {
 	const [busqueda, setBusqueda] = useState({
 		artista: '',
 		cancion: '',
@@ -27,6 +27,8 @@ const Formulario = (props) => {
 			return;
 		}
 		setError(false);
+
+		setBusquedaLetra(busqueda);
 	};
 
 	return (
@@ -69,13 +71,13 @@ const Formulario = (props) => {
 						</button>
 					</div>
 				</form>
-				<div>2</div>
-				<div>3</div>
 			</div>
 		</div>
 	);
 };
 
-Formulario.propTypes = {};
+Formulario.propTypes = {
+	setBusquedaLetra: PropTypes.func.isRequired,
+};
 
 export default Formulario;
