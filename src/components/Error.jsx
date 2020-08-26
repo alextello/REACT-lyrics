@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Error = ({ mensaje, cols }) => {
+const Error = ({ mensaje, cols = 'col-span-2' }) => {
 	return (
 		<div className={cols}>
 			<div
@@ -29,7 +29,6 @@ const Error = ({ mensaje, cols }) => {
 };
 
 Error.propTypes = {
-	cols: PropTypes.string.isRequired,
 	mensaje: PropTypes.string.isRequired,
 };
 

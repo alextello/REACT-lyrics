@@ -18454,6 +18454,11 @@ video {
   animation: bounce 1s infinite;
 }
 
+.letra {
+  white-space: pre;
+  display: inline-block;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
